@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="action-bar">
+      <button (click)="Sort()">Sort</button>
+      <input type="text" [(ngModel)]="userBrand" placeholder="Enter the brand" />
+      <button (click)="setBrand(userBrand)">Search</button>
+
+      <input type="number" [(ngModel)]="minPrice" placeholder="Min Price" />
+      <input type="number" [(ngModel)]="maxPrice" placeholder="Max Price" />
+      <button (click)="setPrice(minPrice, maxPrice)">Filter by Price</button>
+  </div>
+
+  <fieldset class="form-container">
+      <legend><b>
+        Create a Product</b></legend>
+      <form (ngSubmit)="onSubmit()">
+          <div class="form-group">
+              <label for="productId">Product Id</label>
+              <input type="text" id="productId" required [(ngModel)]="product.productId" name="productId" #productId="ngModel" />
+          </div>
+
+          <div class="form-group">
+              <label for="brand">Brand</label>
+              <input type="text" id="brand" [(ngModel)]="product.brand" name="brand" />
+          </div>
+
+          <div class="form-group">
+              <label for="description">Description</label>
+              <input type="text" id="description" [(ngModel)]="product.description" name="description" />
+          </div>
+
+          <div class="form-group">
+              <label for="qty">Quantity</label>
+              <input type="text" id="qty" [(ngModel)]="product.qty" name="qty" />
+          </div>
+
+          <div class="form-group">
+              <label for="price">Price</label>
+              <input type="text" id="price" [(ngModel)]="product.price" name="price" />
+          </div>
+
+          <button type="submit" class="submit-btn">Submit</button>
+      </form>
+  </fieldset>
+
+  <div class="product-list">
+      <div *ngFor="let product of filteredProducts" class="product-item">
+          <span>{{product.productId | uppercase}}</span>
+          <span>{{product.brand | uppercase}}</span>
+          <span>{{product.description | json}}</span>
+          <span>{{product.qty}}</span>
+          <span>{{product.price | currency:'INR'}}</span>
+      </div>
+      <!-- <p>Number of results: {{ resultCount }}</p> -->
+  </div>
+</div>

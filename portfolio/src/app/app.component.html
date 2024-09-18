@@ -1,0 +1,93 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="robots" content="all">
+    <title>Ebthisam - Portfolio</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-item">
+            <h5 class="h5-head">Ebthisam Moideen Koya:</h5>
+            <h5 class="h5-body">Full Stack Developer</h5>
+        </div>
+        
+        <div class="nav-item">
+            <h5 class="h5-head">Location:</h5>
+            <h5 class="h5-body">
+                <span id="location">{{ location }}</span> | <span id="current-time">{{ currentTime }}</span>
+            </h5>
+        </div>
+        
+        <div class="nav-item">
+            <h5 class="h5-head">Navigation:</h5>
+            <h5 class="h5-body">
+                <a class="h5-body" (click)="scrollTo('home')">Home,</a>
+                <a class="h5-body" (click)="scrollTo('about')">About,</a>
+                <a class="h5-body" (click)="scrollTo('work')">Projects,</a>
+                <a class="h5-body" (click)="scrollTo('contact')">Contact</a>
+            </h5>
+        </div>
+        
+        <!-- Theme Switcher -->
+        <div class="nav-item">
+            <h5 class="h5-head">Themes:</h5>
+            <h5 class="h5-body">
+                <a class="h5-body" (click)="setTheme('light')">Light Mode,</a>
+                <a class="h5-body" (click)="setTheme('dark')">Dark Mode</a>
+            </h5>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header id="home">
+        <div class="container">
+            <h1>Ebthisam Moideen Koya</h1>
+            <p>Your Profession</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>A brief introduction about yourself, your background, and what you do.</p>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work">
+        <div class="container">
+            <h2>Selected Work</h2>
+            <div class="work-grid">
+                <div class="work-item">
+                    <img src="assets/project1.jpg" alt="Project 1">
+                    <h3>Project Title 1</h3>
+                </div>
+                <div class="work-item">
+                    <img src="assets/project2.jpg" alt="Project 2">
+                    <h3>Project Title 2</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>If you'd like to work together or just want to say hello, feel free to reach out!</p>
+            <a href="mailto:your.email@example.com" class="btn">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+</body>

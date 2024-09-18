@@ -1,0 +1,69 @@
+<div class="container">
+  <!-- Header -->
+  <header class="header">
+    <h1 class="title">{{ title }}</h1>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content Area -->
+  <div class="content">
+    <!-- Features Aside -->
+    <aside class="features">
+      <ul>
+        <li><a href="#feature1">Feature 1</a></li>
+        <li><a href="#feature2">Feature 2</a></li>
+        <li><a href="#feature3">Feature 3</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Input Area -->
+    <main class="main-content">
+      <section id="feature1" class="feature-section">
+        <h2>Feature 1</h2>
+        <p>This is the content for Feature 1.</p>
+      </section>
+
+      <section id="feature2" class="feature-section">
+        <h2>Feature 2</h2>
+        <p>This is the content for Feature 2.</p>
+      </section>
+
+      <section id="feature3" class="feature-section">
+        <h2>Feature 3</h2>
+        <p>This is the content for Feature 3.</p>
+      </section>
+
+      <!-- Form Section -->
+      <section class="form-section">
+        <div>
+          <label for="input">Enter something:</label>
+          <input id="input" type="text">
+        </div>
+        <div>
+          <button class="btn-submit">Submit</button>
+          <button class="btn-reset">Reset</button>
+        </div>
+      </section>
+
+      <!-- Dynamic content here (scrolling area) -->
+      <div class="dynamic-content">
+        <div *ngFor="let item of [].constructor(100)">
+          <p>Dynamic content {{item}}</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Your Website. All rights reserved.</p>
+  </footer>
+</div>

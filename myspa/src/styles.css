@@ -1,0 +1,307 @@
+html {
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+/* Default theme (light) */
+body {
+    
+    color: #000000;
+}
+/* Navigation styling */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+    z-index: 1000;
+    padding: 10px 0;
+    /* box-shadow: 0px 2px 10px rgba(0,0,0,0.1); */
+    display: flex; justify-content: space-between; align-items: center; padding: 10px; background-color: #f5f5f5;
+    
+    
+}
+.h5-head{
+    color: rgb(112, 113, 114);
+    padding-bottom: 7px;
+}
+.h5-body{
+    margin-top: -4px;
+    color: rgb(44, 43, 43);}
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #555;
+}
+/* Light theme */
+
+
+/* Dark theme styling for navigation bar */
+.dark-theme nav {
+    background-color: #333333; /* Dark background color */
+    color: #ffffff; /* Light text color */
+}
+
+.dark-theme nav a {
+    color: #ffffff; /* Light text color for links */
+}
+
+.dark-theme nav a:hover {
+    color: #dddddd; /* Slightly lighter color for hover state */
+}
+
+/* Additional Dark Theme Styles */
+.dark-theme header, 
+.dark-theme #about, 
+.dark-theme #work, 
+.dark-theme #contact
+{
+    background-color: #333333;
+    color: #ffffff;
+}
+.dark-theme footer {
+    background-color: #222121;
+    color: #ffffff;
+    
+}
+
+.dark-theme #contact .btn {
+    background-color: #ffffff; 
+    color: #333333;/* Light text color for links */
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* General body styling */
+body {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Section Styling */
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.5rem;
+    color: #666;
+}
+
+/* About Section Styling */
+#about {
+    padding: 60px 0;
+  
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Work Section Styling */
+#work {
+    padding: 60px 0;
+   
+    text-align: center;
+}
+
+#work h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.work-item {
+   
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.work-item img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.work-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Contact Section Styling */
+#contact {
+    padding: 60px 0;
+   
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+#contact .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+  color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#contact .btn:hover {
+    background-color: #555;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .landing-content h2 {
+        font-size: 2rem;
+    }
+}
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Dark theme styling for navigation bar */
+.dark-theme nav {
+    background-color: #333333; /* Dark background color */
+    color: #ffffff; /* Light text color */
+}
+
+.dark-theme nav a {
+    color: #ffffff; /* Light text color for links */
+}
+
+.dark-theme nav a:hover {
+    color: #dddddd; /* Slightly lighter color for hover state */
+}
+.dark-theme .nav-item:nth-child(1) h5.h5-head {
+    color: rgb(136, 135, 135); /* Ensure text is white in dark theme */
+}
+.dark-theme .nav-item:nth-child(2) h5.h5-head {
+    color: rgb(136, 135, 135); /* Ensure text is white in dark theme */
+}
+.dark-theme .nav-item:nth-child(3) h5.h5-head {
+    color: rgb(136, 135, 135); /* Ensure text is white in dark theme */
+}
+.dark-theme .nav-item:nth-child(4) h5.h5-head {
+    color: rgb(136, 135, 135); /* Ensure text is white in dark theme */
+}
+
+/* Dark theme styling for navigation items */
+.dark-theme .nav-item:nth-child(1) h5.h5-body {
+    color: rgb(255, 255, 255); /* Ensure text is white in dark theme */
+}
+
+.dark-theme .nav-item:nth-child(2) h5.h5-body {
+    color: rgb(255, 255, 255); /* Ensure text is white in dark theme */
+}
+
+.dark-theme .nav-item:nth-child(3) h5.h5-body {
+    color: rgb(255, 255, 255); /* Ensure text is white in dark theme */
+}
+
+.dark-theme .nav-item:nth-child(4) h5.h5-body {
+    color: rgb(255, 255, 255); /* Ensure text is white in dark theme */
+}
+
+
+/* Full-Height Section Styling */
+header, section {
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}

@@ -1,0 +1,38 @@
+<h2>Product form-builder</h2>
+<div class="container">
+    <form [formGroup]="productForm"
+        (ngSubmit)="onSubmit()"
+        #myform="ngForm"
+    >
+    <label for="">ProductId: </label><br>
+    <input type="text" formControlName="productId"/><br><br>
+
+    <label for="">Brand:</label><br>
+    <input type="text" formControlName="brand"><br><br>
+
+   <div formGroupName="description">
+       <label for="">Age: <br><input type="text" formControlName="age"></label><br>
+       <label for="">Seasons: <br><input type="text" formControlName="seasons"></label>
+
+   </div><br>
+
+    <label for="">Quantity: </label><br>
+    <input type="text" formControlName="qty"><br><br>
+
+    <label for="">Price</label><br>
+    <input type="text" formControlName="price">
+    <div formArrayName="suppliers">
+        <label for="">Suppliers: <br></label>
+        <button (click)="addNewSupplier()">Add New Supplier</button>
+        <div *ngFor="let supplier of suppliers.controls;let i=index">
+            <label for="">New Supplier: <br><input type="text" [formControlName]="i"></label>
+
+        </div>
+
+    </div> 
+
+    <button class="btn btn-outline-secondary" type="submit" [disabled]="!productForm.valid">Submit</button><br>
+
+    
+    </form>
+</div>

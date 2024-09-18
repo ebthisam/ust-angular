@@ -1,0 +1,81 @@
+<div style="display: flex; flex-wrap: wrap;">
+
+  <!-- First Row: Three Equal Width Containers -->
+  <div class="container" style="border: solid 2px #7e7676; width: 33.333%; padding-top: 1.2cm;">
+    <h1>Product Data</h1>
+
+    <p>Product Id: {{ productid }}</p>
+    <p>Description: {{ Description }}</p>
+    <p>Instock: {{ available }}</p>
+    <p>Qty: {{ qty }}</p>
+    <p>
+      Enter order quantity: <input type="text" name="orderqty" id="" [(ngModel)]="orderqty" #inputqty />&nbsp;&nbsp;{{ orderqty }}
+    </p>
+
+    <div [ngSwitch]="inputqty.value">
+      <span *ngSwitchCase="201">Qty not available</span>
+      <span *ngSwitchCase="200">Exact Qty available</span>
+      <span *ngSwitchCase="199">Full Qty available</span>
+      <span *ngSwitchDefault>Check your input</span>
+    </div>
+
+    <p>Delivery:
+      <span [style.background-color]="deliverColor">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </p>
+    <div [innerHTML]="availableValue"></div>
+
+    <button name="placeOrder" (click)="printOrder(inputqty.value)">PlaceOrder</button>
+
+    <div *ngIf="qty > orderqty; else myTemplate">Ordered Quantity available <br /></div>
+    <ng-template #myTemplate>Ordered qty not available <br /></ng-template>
+
+    {{ orderDate | date: 'dd MMMM yyyy' }}
+    <div *ngFor="let product of products; index as i; even as isEven">
+
+      <span *ngIf="isEven; else template" [style.background-color]="evenColor">
+        {{i}}
+        {{ product.productId }} {{ product.description }} {{ product.price }}
+      </span>
+
+      <ng-template #template>
+        <span [style.background-color]="oddColor">
+          {{i}}
+          {{ product.productId }} {{ product.description }} {{ product.price }}
+        </span>
+      </ng-template>
+
+    </div>
+  </div>
+
+  <div class="container" style="border: solid 2px gray; width: 33.333%;">
+    <!-- Listen to the colorChange event from the child component -->
+    <app-color></app-color>
+    <div style="padding: 20px;">
+      <label for="">Enter the Button</label><br />
+      <input type="radio" name="color" (change)="onRadioButtonChange('red')" /> Red
+      <input type="radio" name="color" (change)="onRadioButtonChange('green')" /> Green
+      <input type="radio" name="color" (change)="onRadioButtonChange('blue')" /> Blue
+    </div>
+    <br>
+  </div>
+
+  <div class="container" style="border: solid 2px gray; width: 33.333%;">
+    <app-theme></app-theme>
+    <button (click)="setDarkTheme()">Dark Theme</button>
+  
+  </div>
+
+  <!-- Second Row: Full Width Container -->
+  <div class="container1" style="border: solid 2px gray; width:28.6cm;">
+    <app-formbuilder></app-formbuilder>
+    <app-reactive></app-reactive>
+    <app-data></app-data>
+    <app-fetchall></app-fetchall>
+    <app-update></app-update>
+
+    <app-delete></app-delete>
+
+    <app-token></app-token>
+    <app-lifecycle [title]="title"> This is Demonstrating after content init</app-lifecycle>
+  </div>
+</div>

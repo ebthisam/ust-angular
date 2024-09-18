@@ -1,0 +1,86 @@
+  <nav>
+    <div class="nav-item">
+      <h5 class="h5-head">Ebthisam Moideen Koya:</h5>
+      <h5 class="h5-body">Full Stack Developer</h5>
+    </div>
+
+    <div class="nav-item">
+      <h5 class="h5-head">Location:</h5>
+      <h5 class="h5-body">
+        <span id="location">{{ location }}</span> | <span id="current-time">{{ currentTime }}</span>
+      </h5>
+    </div>
+
+    <div class="nav-item">
+      <h5 class="h5-head">Navigation:</h5>
+      <h5 class="h5-body">
+        <a class="h5-body" style="text-decoration: none;" href="#home">Home,</a>
+        <a class="h5-body" style="text-decoration: none;" href="#about">About,</a>
+        <a class="h5-body" style="text-decoration: none;" href="#work">Projects,</a>
+        <a class="h5-body" style="text-decoration: none;" href="#contact">Contact</a>
+      </h5>
+    </div>
+
+    <!-- Theme Switcher -->
+    <!-- Theme Switcher -->
+<div class="nav-item">
+  <h5 class="h5-head">Themes:</h5>
+  <h5 class="h5-body">
+    <a class="h5-body" style="text-decoration: none;" href="#" (click)="setTheme('light')">Light Mode,</a>
+    <a class="h5-body" style="text-decoration: none;" href="#" (click)="setTheme('dark')">Dark Mode</a>
+  </h5>
+</div>
+
+  </nav>
+
+  <header id="home">
+    <div class="container">
+      <!-- Add the image before the name -->
+      <!-- <img src="assets/thisa.jpeg"  style="width:350px; height:200px; margin-right:0px;"> -->
+      <h1>Ebthisam Moideen Koya</h1>
+      <p>Full Stack Developer</p>
+    </div>
+  </header>
+ 
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>A brief introduction about yourself, your background, and what you do.</p>
+    </div>
+  </section>
+
+  <!-- Work Section -->
+  <section id="work">
+    <div class="container">
+      <h2>Selected Work</h2>
+      <div class="work-grid">
+        <div class="work-item">
+          <img src="project1.jpg" alt="Project 1">
+          <h3>Project Title 1</h3>
+        </div>
+        <div class="work-item">
+          <img src="project2.jpg" alt="Project 2">
+          <h3>Project Title 2</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>If you'd like to work together or just want to say hello, feel free to reach out!</p>
+      <a href="mailto:your.email@example.com" style="text-decoration: none;" class="btn">Get in Touch</a>
+    </div>
+  </section>
+
+<!-- Footer Section -->
+<footer>
+  <div class="container">
+    <p>&copy; 2024 Your Name. All rights reserved.</p>
+  </div>
+</footer>
+

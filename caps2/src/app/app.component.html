@@ -1,0 +1,42 @@
+<div class="container">
+  <header>
+    <div class="logo">{{ title }}</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="content">
+    <aside class="sidebar">
+      <h3>Features</h3>
+      <ul>
+        <li><a href="#">Feature 1</a></li>
+        <li><a href="#">Feature 2</a></li>
+        <li><a href="#">Feature 3</a></li>
+        <li><a href="#">Feature 4</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <h1>Welcome to {{ title }}</h1>
+      <div class="input-group">
+        <input type="text" placeholder="Enter your text here" />
+        <button>Submit</button>
+      </div>
+      <div class="dynamic-content">
+        <div *ngFor="let item of items" class="content-item">
+          <p>{{ item }}</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 {{ title }}. All rights reserved.</p>
+  </footer>
+</div>

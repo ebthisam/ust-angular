@@ -1,0 +1,17 @@
+<fieldset class="form-container">
+      <legend><b> Delete Product</b></legend>
+    <input [(ngModel)]="productId" placeholder="Enter Product ID" class="product-id-input"/>
+    <button (click)="deleteProductById()" class="fetch-btn">Delete Product</button>
+  
+    <div *ngIf="loading" class="loading">
+      Loading product...
+    </div>
+  
+    <div *ngIf="!loading && product" class="product-details">
+      <h3>Product Deleted Successfully!</h3>
+      
+    </div>
+  
+  
+</fieldset>
+  

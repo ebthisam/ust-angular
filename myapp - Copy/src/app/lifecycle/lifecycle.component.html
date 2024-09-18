@@ -1,0 +1,16 @@
+<fieldset class="form-container">
+    <legend><b>LifeCycle</b></legend>  
+        <form>
+      <h4>Life Cycle :</h4>
+      <p>Demostrating life cycle methods in console.</p>
+   
+      <input type="text" (keydown)="keyCapture($event.key)" />
+   
+      <br />
+      <h6>{{ title }}</h6>
+   
+      <button type="submit" (click)="sendMsg()">Click</button>
+    </form>
+    <h1>from parent: {{title}}</h1>
+<ng-content></ng-content>
+</fieldset>

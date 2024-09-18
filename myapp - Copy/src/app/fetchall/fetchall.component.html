@@ -1,0 +1,47 @@
+<fieldset class="form-container">
+<legend><b> Product List</b></legend>  
+    <button (click)="fetchAllProducts()" class="fetch-btn">Fetch All Products</button>
+  
+    <div *ngIf="loading" class="loading">
+      Loading products...
+    </div>
+  
+    <div *ngIf="!loading && products.length > 0" class="product-list">
+      <div *ngFor="let product of products" class="product-item">
+        <div class="product-details">
+          <span><strong>Product ID:</strong> {{ product.productId}}</span>
+          <span><strong>Brand:</strong> {{ product.brand |uppercase}}</span>
+          <span><strong>Description:</strong> {{ product.description }}</span>
+          <span><strong>Quantity:</strong> {{ product.qty }}</span>
+          <span><strong>Price:</strong> {{ product.price | currency: 'INR' }}</span>
+        </div>
+      </div>
+    </div>
+  
+    <!-- <div *ngIf="!loading && products.length === 0" class="no-products">
+      No products found.
+    </div> -->
+
+    <div class="fetchall-container">
+      
+        <input [(ngModel)]="productId" placeholder="Enter Product ID" class="product-id-input"/>
+        <button (click)="fetchProductById()" class="fetch-btn">Fetch Product</button>
+      
+        <div *ngIf="loading" class="loading">
+          Loading product...
+        </div>
+      
+        <div *ngIf="!loading && product" class="product-details">
+          <h3>Product Details</h3>
+          <span><strong>Product ID:</strong> {{ product.productId}}</span>
+          <span><strong>Brand:</strong> {{ product.brand}}</span>
+          <span><strong>Description:</strong> {{ product.description }}</span>
+          <span><strong>Quantity:</strong> {{ product.qty }}</span>
+          <span><strong>Price:</strong> {{ product.price | currency: 'INR' }}</span>
+        </div>
+      
+      
+      </div>
+      
+</fieldset>
+  
